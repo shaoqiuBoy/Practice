@@ -23,32 +23,6 @@
     return sharedInstance;
 }
 
-////不用GCD的方法，使用@synchronized
-//+ (BVARCSingleton *) sharedInstance
-//{
-//    static BVARCSingleton *sharedInstance = nil;
-//    @synchronized(self)
-//    {
-//            if (sharedInstance == nil )
-//            {
-//                sharedInstance = [[self alloc] init];
-//            }
-//    }
-//
-//    return sharedInstance;
-//}
-
-//使用宏
-//+ (BVARCSingleton *) sharedInstance
-//{
-//    DEFINE_SHARED_INSTANCE_USING_BLOCK(^{
-//        return [[self alloc] init];
-//    });
-//}
-
-
-
-
 // 当第一次使用这个单例时，会调用这个init方法。
 - (id)init
 {
