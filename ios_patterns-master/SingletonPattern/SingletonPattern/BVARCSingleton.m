@@ -23,13 +23,11 @@
     return sharedInstance;
 }
 
-// 当第一次使用这个单例时，会调用这个init方法。
 - (id)init
 {
     self = [super init];
     
     if (self) {
-        // 通常在这里做一些相关的初始化任务
     }
     
     return self;
